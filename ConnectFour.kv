@@ -1,0 +1,26 @@
+#:kivy 2.2.1
+
+<MyScreenManager>:
+    MainMenu:
+
+<MainMenu>:
+    MainMenuLayout:
+
+<MainMenuLayout>:
+    Label:
+        markup:True
+        text:"[b][i][color=#800080][size=100]Connect 4[/size][/color][/i][/b]"
+        size_hint:1,.5
+        pos_hint:{'top':1}
+    
+    Button:
+        background_normal: ''
+        background_color:.7,1,0,1
+        markup:True
+        text:"[b][size=20][color=#000000]Start[/color][/size][/b]"
+        size_hint:{.2,.1}
+        pos_hint:{'center_x':.5,'center_y':.25}
+        on_press:app.root.current='gameboard'
+        
+
+

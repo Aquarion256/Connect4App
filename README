@@ -1,0 +1,5 @@
+In one of my previous projects I made a Connect 4 AI in C++. However it utilised the input window for all of it's functions,
+Which is pretty unsightly and annoying to work with.
+
+So I decided to switch over to Python and made a GUI using kivy.
+This was amazing to work with. Kivy has a really easy to use library and the use of a .kv file makes things so neat and easy.

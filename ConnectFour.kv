@@ -2,7 +2,9 @@
 
 <MyScreenManager>:
     MainMenu:
-
+    WinScreen1:
+    WinScreen2:
+    DrawScreen:
 <MainMenu>:
     MainMenuLayout:
 
@@ -17,10 +19,123 @@
         background_normal: ''
         background_color:.7,1,0,1
         markup:True
-        text:"[b][size=20][color=#000000]Start[/color][/size][/b]"
+        text:"[b][size=35][color=#000000]Start[/color][/size][/b]"
         size_hint:{.2,.1}
-        pos_hint:{'center_x':.5,'center_y':.25}
+        pos_hint:{'center_x':.5,'center_y':.45}
         on_press:app.root.current='gameboard'
+    
+    Button:
+        background_normal: ''
+        background_color:.7,1,0,1
+        markup:True
+        text:"[b][size=35][color=#000000]Exit[/color][/size][/b]"
+        size_hint:{.2,.1}
+        pos_hint:{'center_x':.5,'center_y':0.3}
+        on_press:root.endapp(self)
         
 
+<WinScreen1>:
+    RelativeLayout:
+        Label:
+            markup:True
+            text:"[b][i][color=#800080][size=100]Player One WINS!![/size][/color][/i][/b]"
+            size_hint:1,.5
+            pos_hint:{'top':1}
 
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Play Again?[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':.35}
+            on_press:root.playagain(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Exit[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':0.2}
+            on_press:root.endapp(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]View Board[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':0.5}
+            on_press:app.root.current="gameboard"
+        
+
+<WinScreen2>:
+    RelativeLayout:
+        Label:
+            markup:True
+            text:"[b][i][color=#800080][size=100]Player Two WINS!![/size][/color][/i][/b]"
+            size_hint:1,.5
+            pos_hint:{'top':1}
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Play Again?[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':.35}
+            on_press:root.playagain(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Exit[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':.2}
+            on_press:root.endapp(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]View Board[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':0.5}
+            on_press:app.root.current="gameboard"
+
+<DrawScreen>:
+    RelativeLayout:
+        Label:
+            markup:True
+            text:"[b][i][color=#800080][size=100]It's a Draw![/size][/color][/i][/b]"
+            size_hint:1,.5
+            pos_hint:{'top':1}
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Play Again?[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':.35}
+            on_press:root.playagain(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]Exit[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':.2}
+            on_press:root.endapp(self)
+
+        Button:
+            background_normal: ''
+            background_color:.7,1,0,1
+            markup:True
+            text:"[b][size=35][color=#000000]View Board[/color][/size][/b]"
+            size_hint:{.2,.1}
+            pos_hint:{'center_x':.5,'center_y':0.5}
+            on_press:app.root.current="gameboard"
